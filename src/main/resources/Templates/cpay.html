@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <style>
+    	select{
+    		padding: 4px 2px;
+    		margin:2px 0 20px 10px;
+    	}
+    	label{
+    		display: block;
+    	}
+    	form{
+    		display: block;
+    	}
+        input{
+            display: inline-block;
+            padding:4px 2px;
+            margin:2px 0 20px 10px;
+        };
+        p{
+            display: inline-block;
+        }
+    </style>
+    <title>CPAY</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>CPAY</h1>
+<div>
+    <p>Контакт за Инфо: +389 123 456 789</p>
+    <form>
+        <label>Број на Картичка</label> <input type="text" name="CCNumber" >
+       <label>Име и презиме</label> <input type="text" name="NameSurname" >
+        <label>Тип на картичка</label><select name="CCType">
+  										<option value="MsterCard">Master Card</option>
+										<option value="Visa">Visa</option>
+									</select> 
+        <label>Дата на валидност</label><input type="month" name="CCDate" >
+        <label>CVV2/CVCV2</label><input type="text" name="CVV2">
+    </form>
+       Износ:<p th:text="${price}"></p>
+        <p th:text="${currency}"></p>
+        <p> Display Products here</p>
+      <input type="button" name="accept" value="Потврди">       <input type="button" name="decline" value="Откажи">
+</div>
+</body>
+</html>
